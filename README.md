@@ -3,6 +3,8 @@ st
 
 simple statistics from the command line interface (CLI)
 
+This is a Rust port of the original Perl version that aims for API compatibility with better performance and scalability.
+
 ### Description
 
 Imagine you have this sample file:
@@ -159,16 +161,6 @@ You can change this behavior with the following options:
     --strict   # throws an error, interrupting process
     --quiet|q  # no warning
 
-### Author
-
-Nelson Ferraz <<nferraz@gmail.com>>
-
 ### Contribute
 
-Send comments, suggestions and bug reports to:
-
-https://github.com/nferraz/st/issues
-
-Or fork the code on github:
-
-https://github.com/nferraz/st
+https://github.com/chadbrewbaker/st
