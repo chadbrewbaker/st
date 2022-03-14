@@ -5,12 +5,18 @@
 
 //use std::collections::hash_map::HashMap;
 
-use clap::Parser;
+use clap::{Parser,ValueHint};
+use std::io::{self, BufRead};
 
+use std::fs::File;
+use std::path::PathBuf;
 /// Simple program to greet a person
 #[derive(Parser, Debug)]
 #[clap(author, version, about, long_about = None)]
 struct Args {
+
+    #[clap(name = "JSON", parse(from_os_str), value_hint = ValueHint::AnyPath)]
+    input: PathBuf,
     /// Name of the person to greet
     #[clap(short, long)]
     name: String,
@@ -70,9 +76,9 @@ fn main() {
 
     let args = Args::parse();
 
-    for _ in 0..args.count {
-        println!("Hello {}!", args.name)
-    }
+//    for _ in 0..args.count {
+//        println!("Hello {}!", args.name)
+ //   }
 
     /*
         let output = if cfg!(target_os = "windows") {
